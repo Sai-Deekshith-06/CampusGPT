@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+itsdangerous
+python-dotenv
+
+google-genai
+
+pypdf
+
+sqlalchemy
+asyncpg
+psycopg[binary]
+pgvector
+alembic

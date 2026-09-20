@@ -1,0 +1,109 @@
+.processing-status-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.processing-status-empty {
+  color: #888;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.step-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+.step-passed .step-circle {
+  border-color: #16a249;
+  color: #16a249;
+}
+
+.step-active .step-circle {
+  border-color: #3b82f6;
+}
+
+.step-failed .step-circle {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.active-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+.step-label {
+  font-size: 10px;
+  color: #666;
+  font-weight: 500;
+}
+
+.step-connector {
+  flex: 1;
+  height: 2px;
+  background-color: #ccc;
+  margin: 0 4px;
+  margin-top: -14px;
+  z-index: 1;
+}
+
+.step-connector.connected {
+  background-color: #16a249;
+}
+
+.badge-container {
+  margin-left: 16px;
+  min-width: 130px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-success {
+  background-color: #dcfce7;
+  color: #16a249;
+}
+
+.badge-danger {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.badge-primary {
+  background-color: #dbeafe;
+  color: #3b82f6;
+}
+
+.badge-secondary {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}

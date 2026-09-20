@@ -1,0 +1,123 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+}
+.login {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login form {
+  width: 320px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.login input,
+.login button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.login-error {
+  color: red;
+}
+/* Improve preview modal close button */
+.hdgrfm-fm-modal-header {
+  padding: 15px 20px !important;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hdgrfm-close-icon {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s, transform 0.1s !important;
+  color: #666 !important;
+}
+
+.hdgrfm-close-icon:hover {
+  background-color: #ffe6e6 !important;
+  color: #d32f2f !important;
+  transform: scale(1.1) !important;
+}
+
+/* Allow the preview modal to expand fully */
+.hdgrfm-fm-modal.dialog.is-preview-modal {
+  max-width: 95vw !important;
+  width: max-content !important;
+}
+
+.hdgrfm-fm-modal-body.is-preview-modal-body {
+  padding: 0 !important;
+}
+
+/* ==========================================================================
+   Responsive UI Improvements for Mobile/Tablets
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Let the toolbar buttons wrap or scroll */
+  .hdgrfm-toolbar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px !important;
+  }
+  
+  /* Disable the sidebar on mobile entirely */
+  .hdgrfm-navigation-pane,
+  .hdgrfm-nav-toggler {
+    display: none !important;
+  }
+  
+  /* Ensure the main files view takes full width when sidebar is absolute */
+  .hdgrfm-folders-preview {
+    width: 100% !important;
+    flex: 1 !important;
+  }
+  
+  /* Hide less important columns in the list view to prevent horizontal scrolling */
+  .hdgrfm-file-date,
+  .hdgrfm-file-permissions,
+  .hdgrfm-modified-date {
+    display: none !important;
+  }
+  
+  /* Make preview modal take full width on mobile */
+  .hdgrfm-fm-modal.dialog.is-preview-modal {
+    width: 95vw !important;
+    height: 90vh !important;
+    max-width: none !important;
+  }
+}
+
+.hdgrfm-file-permissions {
+  display: none !important;
+}
+
